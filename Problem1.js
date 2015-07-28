@@ -13,8 +13,8 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 function multipleSum(upperBound) {
 	var multiples = []; //just to see the multiples
-	var collector = 0; //to determine sum
-	for (var i=0; i < upperBound; i++) {
+	var collector; //to determine sum
+	for (var i=1; i < upperBound; i++) {
 		if ( i%3===0 || i%5===0){
 			collector+=i;
 			multiples.push(i);
