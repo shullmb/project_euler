@@ -10,11 +10,10 @@ input: integer n;
 output: integer m;
 
 If n is prime
-
-	return largest prime factor
-	
+	return "the number is prime"
 Else
-	return "the number is not prime"
+	determine prime factors of n
+	return largest	
 
 
 
