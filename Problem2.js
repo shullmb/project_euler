@@ -14,8 +14,12 @@ do not exceed four million, find the sum of the even-valued terms.
 
 
 
-while current term of fibonacci sequence < 4000000
-	continure generating terms
+################################################
+
+
+continue generating terms of fibonacci sequence
+while current term  < 4000000
+	
 	
 if term is even
 	add value to sum variable
@@ -42,4 +46,4 @@ function evenFibSum(maxNum){
 	console.log( "The sum of even Fibonacci Numbers less than " + maxNum + " is " + fibSum);
 };
 
-evenFibSum(1000);
+evenFibSum(4000000);
