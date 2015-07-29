@@ -20,6 +20,8 @@ do not exceed four million, find the sum of the even-valued terms.
 3) reduce
 
 */
+
+/*
 //function fibArray(valLessThan) {
 //	for (var i = 0; i < valLessThan; i++){
 		function fibonacci(nTerms) {
@@ -35,3 +37,39 @@ do not exceed four million, find the sum of the even-valued terms.
 }
 
 fibArray(10);
+
+*/
+
+
+function fib(n) {
+	var a=0;
+	var b=1;
+	var f;
+	while (f < n) {
+		f=a+b;
+		b=a;
+		a=f;
+		console.log(f);
+		
+		
+	}
+
+}
+
+fib(100);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
