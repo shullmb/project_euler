@@ -12,64 +12,34 @@ terms will be:
 By considering the terms in the Fibonacci sequence whose values
 do not exceed four million, find the sum of the even-valued terms.
 
-1) Create array of Fibonacci Sequence whose value < 4000000
-	fibonacci equation x = (x-1)+(x-2)
+
+
+while current term of fibonacci sequence < 4000000
+	continure generating terms
 	
-2) push even numbers to array
-
-3) reduce
-
+if term is even
+	add value to sum variable
+	
 */
 
-/*
-//function fibArray(valLessThan) {
-//	for (var i = 0; i < valLessThan; i++){
-		function fibonacci(nTerms) {
-			var fib=[0,1]; //initialize with first 2 terms
-			for (j=2; fib.length < nTerms; j++){
-				fib[j]=fib[j-2]+fib[j-1]
-				
-			}
-			console.log(fib);
+function evenFibSum(maxNum){
+    var fibSum=0;
+	var a = 0;
+	var b = 1;
+	var current;
+	
+	do {
+		current = a + b;
+		b = a;
+		a = current;
+		
+		if (current%2==0) {
+			fibSum+=current;
+			console.log(current)
 		}
 		
-		fibonacci();
-}
+	} while ( current < maxNum);
+	console.log( "The sum of even Fibonacci Numbers less than " + maxNum + " is " + fibSum);
+};
 
-fibArray(10);
-
-*/
-
-
-function fib(n) {
-	var a=0;
-	var b=1;
-	var f;
-	while (f < n) {
-		f=a+b;
-		b=a;
-		a=f;
-		console.log(f);
-		
-		
-	}
-
-}
-
-fib(100);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+evenFibSum(1000);
