@@ -12,8 +12,6 @@ terms will be:
 By considering the terms in the Fibonacci sequence whose values
 do not exceed four million, find the sum of the even-valued terms.
 
-
-
 ################################################
 
 
@@ -27,7 +25,7 @@ if term is even
 */
 
 function evenFibSum(maxNum){
-    var fibSum=0;
+    var fibSum = 0;
 	var a = 0;
 	var b = 1;
 	var current;
@@ -47,3 +45,11 @@ function evenFibSum(maxNum){
 };
 
 evenFibSum(4000000);
+
+//returns "The sum of even Fibonacci Numbers less than 4000000 is 4613732"
+
+
+
+
+
+
