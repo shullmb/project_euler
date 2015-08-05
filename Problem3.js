@@ -23,5 +23,14 @@ INCOMPLETE
 */
 
 function lrgPrime(num) {
-	
+		var factors = [];
+		var denom = 2;
+		while (num%denom === 0) {
+			factors.push(denom);
+			num/=denom;
+		}
+		console.log(factors);
+		console.log(Math.max(factors));
 }
+
+lrgPrime(10001);
