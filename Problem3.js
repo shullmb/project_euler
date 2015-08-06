@@ -24,7 +24,7 @@ COMPLETE
 
 function lrgPrime(num) {
 		var origin = num;
-		if (n <= 3){
+		if (num <= 3){
 			return(num);
 		}
 		var factors = [];
@@ -67,4 +67,6 @@ function lrgPrime(num) {
 
 lrgPrime(600851475143);
 
-//returns [71,839,1471, 6857] largest factor = 6857
+//Console logs:
+// [71, 839, 1471, 6857]
+//The largest prime factor of 600851475143 is 6857
