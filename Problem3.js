@@ -16,21 +16,55 @@ Else
 	return largest	
 
 
+lots of help from rosetta code... I am not a mathmetician.
 
 
-
-INCOMPLETE
+COMPLETE
 */
 
 function lrgPrime(num) {
-		var factors = [];
-		var denom = 2;
-		while (num%denom === 0) {
-			factors.push(denom);
-			num/=denom;
+		var origin = num;
+		if (n <= 3){
+			return(num);
 		}
+		var factors = [];
+		var complete = false;
+		while (!complete) {
+			if (num%2 === 0){
+				factors.push(2);
+				num /= 2;
+				continue;
+			} 
+			if (num%3 === 0){
+				factors.push(3);
+				num /= 3;
+				continue;
+			}
+			if (num === 1){
+				return factors;
+			}
+			var sqRoot = Math.sqrt(num);
+			complete = true;
+			for (var i = 6; i<= sqRoot; i += 6){
+				if (num%(i-1) === 0){
+					factors.push(i-1);
+					num /= (i-1);
+					complete = false;
+					break;
+				}
+				if (num%(i+1) === 0){
+					factors.push(i+1);
+					num /= (i+1);
+					complete= false;
+					break;
+				}
+			}
+		}
+		factors.push(num);
 		console.log(factors);
-		console.log(Math.max(factors));
+		console.log( "The largest prime factor of " + origin + " is " + factors[(factors.length -1)]);
 }
 
-lrgPrime(10001);
+lrgPrime(600851475143);
+
+//returns [71,839,1471, 6857] largest factor = 6857
